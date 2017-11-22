@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello$', main),
     url(r'^add$', cal_views.add, name='add'),
-    url(r'^add2/(\d)+/(\d)+/$', cal_views.add2, name='add2'),
+    url(r'^add2/(\d+)/(\d+)/$', cal_views.add2, name='add2'),
 
 ]
