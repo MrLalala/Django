@@ -16,8 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from learn.views import index as main
+from cal import views as cal_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', main),
+    url(r'^hello$', main),
+    url(r'^add$', cal_views.add, name='add'),
+    url(r'^add2/(\d)+/(\d)+/$', cal_views.add2, name='add2'),
+
 ]
