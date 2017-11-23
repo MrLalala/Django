@@ -15,15 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from learn.views import index as main
+from learn import views as ler_views
 from cal import views as cal_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^hello$', main),
+    url(r'^hello$', ler_views.index),
     url(r'^add$', cal_views.add, name='add'),
     url(r'^new_add2/(\d+)/(\d+)/$', cal_views.add2, name='add2'),
     url(r'^$', cal_views.index, name='home'),
     url(r'^add2/(\d+)/(\d+)/$', cal_views.old_redirect),
-
+    url(r'^$', ler_views.home, name='home_learn')
 ]
