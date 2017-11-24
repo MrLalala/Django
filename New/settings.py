@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # 'cal',
     # 'learn',
     'people',
+    'blog',
 
 ]
 
