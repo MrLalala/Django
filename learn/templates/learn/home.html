@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My World</title>
+</head>
+<body>
+<h1>this is my Django</h1>
+
+<h2>{{ string }}</h2>
+{% for i in list %}
+    <h3>{{ i }}</h3>
+{% endfor %}
+{% for key, value in dict.items %}
+    {{ key }}:{{ value }}
+{% endfor %}
+<br/>
+{% for i in list2 %}
+    {{ i }}{% if not forloop.last %},{% endif %}
+{% endfor %}
+<br/>
+<ul>
+{% for i in empty %}
+    {% empty %}
+    <li>List is Empty</li>
+{% endfor %}
+</ul>
+<br>
+<a href="{% url 'hello' %}">test</a>
+<br>
+{% url 'hello' %}
+<br>
+<a href="{{ hello }}">this is hello</a>
+<br>
+{% if a >= 90 %}
+    <p>Good</p>
+    {% elif a >= 80 %}
+    <p>Middle</p>
+    {% elif a >= 70 %}
+    <p>bad</p>
+    {% else %}
+    <p>failure</p>
+{% endif %}
+<br>
+{% if num <= 100 and num >= 0 %}
+    <p>num in range(100)</p>
+    {% else %}
+    <p>num not in range(100)</p>
+{% endif %}
+<br>
+{% comment %}
+    <p>Commented out text with {{  }}</p>
+{% endcomment %}
+{% if 'a' in list1 %}
+    {% if 'b' not in empty %}
+        <p>this is good</p>
+    {% endif %}
+{% endif %}
+<br>
+{{ request.path }}<br>
+{{ request.GET.urlencode }}
+{% if request.user.is_authenticated %}
+    <p>authenticated</p>
+    {% else %}
+    <p>not authentic</p>
+{% endif %}
+
+{% if test == 100 %}
+    <p>test success</p>
+    {% else %}
+    <p>test failure</p>
+{% endif %}
+</body>
+</html>

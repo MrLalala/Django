@@ -30,7 +30,7 @@ def add2(request, a, b):
 
 # 返回html页面
 def index(request):
-    return render(request, 'home.html')
+    return render(request, 'cal/home.html')
 
 
 # Create your views here.

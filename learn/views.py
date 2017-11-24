@@ -10,5 +10,15 @@ def index(request):
 
 
 def home(request):
-    return render(request, 'home.html')
+    string = u'Study for Django!'
+    list1 = [1, 2, 3, 4, 5]
+    list2 = range(100)
+    dict1 = {'site': u'my site', 'content': u'Django'}
+    return render(request, 'learn/home.html',
+                  {'string': string,
+                   'list': list1,
+                   'dict': dict1,
+                   'list2': list2,
+                   'request': request,
+                   'test': 100})
 # Create your views here.
