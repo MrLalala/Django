@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     # 'people',
     # 'blog',
     # 'blog2',
-    'blog3',
-
+    # 'blog3',
+    'form',
 ]
 
 MIDDLEWARE = [

@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from learn import views as ler_views
 from cal import views as cal_views
+from form import views as form_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,4 +28,6 @@ urlpatterns = [
     # url(r'^add2/(\d+)/(\d+)/$', cal_views.old_redirect),
     # url(r'^$', ler_views.home, name='home_learn'),
     # url(r'^hello$', ler_views.index, name='hello'),
+    url(r'^add/$', form_views.add, name='add'),
+    url(r'^home/$', form_views.home, name='home')
 ]
