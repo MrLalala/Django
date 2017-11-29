@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     # 'blog2',
     # 'blog3',
     # 'form',
-    "form2",
-
+    # "form2",
+    'blog4',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +63,7 @@ ROOT_URLCONF = 'New.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,6 +71,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'New.context_processor.settings',
+                'New.context_processor.ip_address',
             ],
         },
     },

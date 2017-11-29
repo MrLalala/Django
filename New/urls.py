@@ -19,6 +19,7 @@ from learn import views as ler_views
 from cal import views as cal_views
 from form import views as form_views
 from form2 import views as form2_views
+from blog4 import views as blog4_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -31,5 +32,8 @@ urlpatterns = [
     # url(r'^hello$', ler_views.index, name='hello'),
     # url(r'^add/$', form_views.add, name='add'),
     # url(r'^home/$', form_views.home, name='home')
-    url(r'^$', form2_views.index, name='home'),
+    # url(r'^$', form2_views.index, name='home'),
+    url(r'^home/$', blog4_views.index, name='b4index'),
+    url(r'^column/$', blog4_views.columns, name='b4column'),
 ]
+
